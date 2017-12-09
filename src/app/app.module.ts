@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { PurchasedItemsComponent } from './purchased-items/purchased-items.component';
 import { GenericRestService } from './services/generic-rest.service';
 import { HttpModule } from '@angular/http';
-import {DataTableModule } from 'angular-4-data-table-bootstrap-4';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,8 +13,7 @@ import {DataTableModule } from 'angular-4-data-table-bootstrap-4';
   ],
   imports: [
     BrowserModule,
-    HttpModule, 
-    DataTableModule
+    HttpModule
   ],
   providers: [GenericRestService],
   bootstrap: [AppComponent]

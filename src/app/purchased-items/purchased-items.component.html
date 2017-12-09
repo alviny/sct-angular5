@@ -1,3 +1,14 @@
 <div style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
-
+    <table>
+        <tr>
+            <th>Description</th> 
+            <th>Price</th>
+        </tr>
+        <ng-template ngFor let-item [ngForOf]="purchasedItems" let-i="index" [ngForTrackBy]="trackByFn">
+            <tr>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>    
+            </tr>     
+        </ng-template>
+    </table>
 </div>
