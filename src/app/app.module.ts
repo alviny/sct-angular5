@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PurchasedItemsComponent } from './purchased-items/purchased-items.component';
 import { GenericRestService } from './services/generic-rest.service';
 import { HttpModule } from '@angular/http';
+import { GridModule } from '@progress/kendo-angular-grid';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +14,8 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    GridModule
   ],
   providers: [GenericRestService],
   bootstrap: [AppComponent]
