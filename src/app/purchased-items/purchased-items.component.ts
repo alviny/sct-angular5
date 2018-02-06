@@ -4,12 +4,12 @@ import {GenericRestService} from '../services/generic-rest.service';
 @Component({
   selector: 'app-purchased-items',
   templateUrl: './purchased-items.component.html',
-  styleUrls: ['./purchased-items.component.css'],
+  styleUrls: ['./purchased-items.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class PurchasedItemsComponent implements OnInit {
   purchasedItems:PurchasedItem[];
-  private endpoint_url='service/items';
+  private endpoint_url='service/purchased/items';
 
 
   constructor(private _purchasedItemService: GenericRestService) { 

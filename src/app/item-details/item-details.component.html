@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{ item.summary }}</h1>
+    <dl class="list">
+      <dt>Product No.</dt>
+      <dd>{{ item.id }}</dd>
+      <dt>Description</dt>
+      <dd>{{ item.description}}</dd>
+      <dt>Price</dt>
+      <dd>{{ item.price}}</dd>
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/item-edit', item._id]" class="btn btn-success">Edit</a>
+    </div>
+</div>

@@ -13,13 +13,28 @@ export class GenericRestService {
                                      'Accept': 'q=0.8;application/json;q=0.9' });
         this.options = new RequestOptions({ headers: this.headers });
     }
-
+    /** HTTP GET Service */
     getService(url: string): Promise<any> {
         return this.http
             .get(url)
             .toPromise()
             .then(this.extractData)
             .catch(this.handleError);
+    }
+    /** HTTP POST Service */
+    postService(url: string, obj:any):Promise<any>{
+        return this.http
+            .post(url,obj)
+            .toPromise()
+            .then(this.extractData)
+            .catch(this.handleError);
+    }
+    /** HTTP PUT Service */
+    putService(url:string, obj:any): Promise<any>{
+        return this.http
+        .put(url,obj)
+        .toPromise()
+        .catch(this.handleError);       
     }
 
     private extractData(res: Response) {
